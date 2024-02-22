@@ -19,7 +19,6 @@ class ViewAdapter (fragmentManager: FragmentManager, lifecycle: Lifecycle): Frag
         when(position){
             0 ->return BooksFragment()
             1-> return GamesFragment()
-            2-> return MovieFragment()
         }
         return MovieFragment()
     }
