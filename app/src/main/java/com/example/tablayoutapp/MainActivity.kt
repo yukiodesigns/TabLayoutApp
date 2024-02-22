@@ -15,14 +15,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val viewpager = findViewById<ViewPager2>(R.id.viewpager)
-        val tablayout = findViewById<TabLayout>(R.id.tablayout)
+        val tabLayout = findViewById<TabLayout>(R.id.tablayout)
 
         val adapter = ViewAdapter(
             supportFragmentManager, lifecycle
         )
 
         viewpager.adapter = adapter
-        TabLayoutMediator(tablayout, viewpager){
+        TabLayoutMediator(tabLayout, viewpager){
             tab, position -> tab.text = tabsArray[position]
         }.attach()
     }
